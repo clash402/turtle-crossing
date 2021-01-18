@@ -1,9 +1,6 @@
-from turtle import Screen
-
-
 class GUI:
-    def __init__(self):
-        self._screen = Screen()
+    def __init__(self, screen):
+        self._screen = screen
 
         self._screen.setup(600, 600)
         self._screen.title("Turtle Crossing")

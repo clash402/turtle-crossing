@@ -1,16 +1,12 @@
-from gui import GUI
-from player import Player
-from fleet import Fleet
-from scoreboard import Scoreboard
 import time
 
 
 class Game:
-    def __init__(self):
-        self._gui = GUI()
-        self._player = Player(self._gui)
-        self._fleet = Fleet(8)
-        self._scoreboard = Scoreboard()
+    def __init__(self, gui, player, fleet, scoreboard):
+        self._gui = gui
+        self._player = player(self._gui)
+        self._fleet = fleet
+        self._scoreboard = scoreboard
 
     # PUBLIC METHODS
     def play(self):
