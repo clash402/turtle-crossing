@@ -11,7 +11,7 @@ if __name__ == "__main__":
     game = Game(
         GUI(Screen()),
         Player,
-        Fleet(8, Car),
+        Fleet(Car),
         Scoreboard()
     )
 
