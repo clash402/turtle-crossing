@@ -5,7 +5,7 @@ class Player(Turtle):
     def __init__(self, ui):
         super().__init__()
 
-        self.ui = ui
+        self._ui = ui
 
         self._STARTING_POS = (0, -260)
         self._MOVE_INCREMENT = 10
@@ -25,8 +25,8 @@ class Player(Turtle):
         self.goto(self._STARTING_POS)
 
     def _listen_for_key_press(self):
-        self.ui.listen()
-        self.ui.onkey(self._move_up, "Up")
+        self._ui.listen()
+        self._ui.onkey(self._move_up, "Up")
 
     def _move_up(self):
         self.forward(self._MOVE_INCREMENT)
