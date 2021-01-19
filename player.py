@@ -18,20 +18,20 @@ class Player(Turtle):
         self.setheading(90)
 
         self._reset_pos()
-        self.listen_for_key_press()
+        self._listen_for_key_press()
 
     # PRIVATE METHODS
     def _reset_pos(self):
         self.goto(self._STARTING_POS)
 
-    # PUBLIC METHODS
-    def listen_for_key_press(self):
+    def _listen_for_key_press(self):
         self.gui.listen()
-        self.gui.onkey(self.move_up, "Up")
+        self.gui.onkey(self._move_up, "Up")
 
-    def move_up(self):
+    def _move_up(self):
         self.forward(self._MOVE_INCREMENT)
 
+    # PUBLIC METHODS
     def has_crossed_finish_line(self):
         if self.ycor() > self._FINISH_LINE_Y:
             self._reset_pos()
