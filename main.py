@@ -4,7 +4,7 @@ from turtle import Screen
 from player import Player
 from fleet import Fleet
 from car import Car
-from scoreboard import Scoreboard
+from hud import HUD
 
 
 if __name__ == "__main__":
@@ -12,7 +12,7 @@ if __name__ == "__main__":
         UI(Screen()),
         Player,
         Fleet(Car),
-        Scoreboard(1)
+        HUD(1)
     )
 
     game.play()

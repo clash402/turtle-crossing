@@ -1,7 +1,7 @@
 from turtle import Turtle
 
 
-class Scoreboard(Turtle):
+class HUD(Turtle):
     def __init__(self, level):
         super().__init__()
 

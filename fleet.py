@@ -3,7 +3,7 @@ class Fleet(list):
         super().__init__()
 
         self._car = car
-        self._car_count = 2
+        self._car_count = 8
 
         self._create_fleet()
 
