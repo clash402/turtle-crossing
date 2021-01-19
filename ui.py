@@ -1,4 +1,4 @@
-class GUI:
+class UI:
     def __init__(self, screen):
         self._screen = screen
 

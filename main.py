@@ -1,5 +1,5 @@
 from game import Game
-from gui import GUI
+from ui import UI
 from turtle import Screen
 from player import Player
 from fleet import Fleet
@@ -9,7 +9,7 @@ from scoreboard import Scoreboard
 
 if __name__ == "__main__":
     game = Game(
-        GUI(Screen()),
+        UI(Screen()),
         Player,
         Fleet(Car),
         Scoreboard()

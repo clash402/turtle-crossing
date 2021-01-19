@@ -2,9 +2,9 @@ import time
 
 
 class Game:
-    def __init__(self, gui, player, fleet, scoreboard):
-        self._gui = gui
-        self._player = player(self._gui)
+    def __init__(self, ui, player, fleet, scoreboard):
+        self._ui = ui
+        self._player = player(self._ui)
         self._fleet = fleet
         self._scoreboard = scoreboard
 
@@ -13,7 +13,7 @@ class Game:
         game_is_in_progress = True
 
         while game_is_in_progress:
-            self._gui.update()
+            self._ui.update()
             time.sleep(0.1)
 
             for car in self._fleet:
@@ -28,4 +28,4 @@ class Game:
                     self._scoreboard.increment_level()
                     car.increase_speed()
 
-        self._gui.exitonclick()
+        self._ui.exitonclick()
