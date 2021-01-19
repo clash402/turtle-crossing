@@ -12,7 +12,7 @@ if __name__ == "__main__":
         UI(Screen()),
         Player,
         Fleet(Car),
-        Scoreboard()
+        Scoreboard(1)
     )
 
     game.play()

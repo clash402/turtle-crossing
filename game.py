@@ -8,6 +8,12 @@ class Game:
         self._fleet = fleet
         self._scoreboard = scoreboard
 
+        self._level = 1
+
+    # PRIVATE METHODS
+    def _increment_level(self):  # Possibly move to Game or Level class
+        self._level += 1
+
     # PUBLIC METHODS
     def play(self):
         game_is_in_progress = True
@@ -25,7 +31,8 @@ class Game:
                     self._scoreboard.display_game_over()
 
                 if self._player.has_crossed_finish_line():
-                    self._scoreboard.increment_level()
+                    self._increment_level()
+                    self._scoreboard.update_display(self._level)
                     car.increase_speed()
 
         self._ui.exitonclick()
